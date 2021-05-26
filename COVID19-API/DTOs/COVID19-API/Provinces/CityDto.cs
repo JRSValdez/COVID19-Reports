@@ -1,10 +1,10 @@
 ﻿
-namespace COVID19_API.DTOs.COVID19_API.Regions
+namespace COVID19_API.DTOs.COVID19_API.Provinces
 {
     public class CityDto
     {
-        public string name { get; set; }
         public int confirmed { get; set; }
+
         public int deaths { get; set; }
     }
 }

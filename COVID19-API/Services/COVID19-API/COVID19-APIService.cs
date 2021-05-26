@@ -1,4 +1,5 @@
-﻿using COVID19_API.DTOs.COVID19_API.TopTen;
+﻿using COVID19_API.DTOs.COVID19_API.Provinces;
+using COVID19_API.DTOs.COVID19_API.TopTen;
 using COVID19_API.Responses.COVID19_API;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -20,6 +21,13 @@ namespace COVID19_API.Services.COVID19_API
         {
             string endpoint = "/regions";
             var result = await Call<BaseResponse<RegionDto>>(nameof(HttpMethod.Get), endpoint);
+            return result;
+        }
+
+        public async Task<BaseResponse<ProvincesDto>> GetProvincesByRegion(string regionISO)
+        {
+            string endpoint = $"/reports?iso={regionISO}";
+            var result = await Call<BaseResponse<ProvincesDto>>(nameof(HttpMethod.Get), endpoint);
             return result;
         }
     }

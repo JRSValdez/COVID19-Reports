@@ -178,9 +178,13 @@
     <Compile Include="App_Start\NinjectResolver.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\RegionsController.cs" />
     <Compile Include="Controllers\TopTenController.cs" />
-    <Compile Include="DTOs\COVID19-API\Regions\CityDto.cs" />
+    <Compile Include="DTOs\COVID19-API\Provinces\CityDto.cs" />
+    <Compile Include="DTOs\COVID19-API\Provinces\ProvincesDto.cs" />
+    <Compile Include="DTOs\COVID19-API\Provinces\RegionDto.cs" />
+    <Compile Include="DTOs\COVID19-API\Provinces\ProvincesTopTen.cs" />
     <Compile Include="DTOs\COVID19-API\Regions\RegionDto.cs" />
     <Compile Include="DTOs\COVID19-API\TopTen\RegionDto.cs" />
     <Compile Include="DTOs\COVID19-API\TopTen\TopTenDto.cs" />
