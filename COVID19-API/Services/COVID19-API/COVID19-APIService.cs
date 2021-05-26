@@ -17,5 +17,12 @@ namespace COVID19_API.Services.COVID19_API
             var result = await Call<BaseResponse<TopTenDto>>(nameof(HttpMethod.Get), endpoint);
             return result;
         }
+
+        public async Task<BaseResponse<RegionDto>> GetRegions()
+        {
+            string endpoint = "/regions";
+            var result = await Call<BaseResponse<RegionDto>>(nameof(HttpMethod.Get), endpoint);
+            return result;
+        }
     }
 }

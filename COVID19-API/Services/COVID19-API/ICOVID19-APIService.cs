@@ -7,6 +7,7 @@ namespace COVID19_API.Services.COVID19_API
     public interface ICOVID19_APIService
     {
         Task<BaseResponse<TopTenDto>> GetTopTen();
+        Task<BaseResponse<RegionDto>> GetRegions();
 
     }
 }

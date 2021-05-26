@@ -178,7 +178,10 @@
     <Compile Include="App_Start\NinjectResolver.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\RegionsController.cs" />
     <Compile Include="Controllers\TopTenController.cs" />
+    <Compile Include="DTOs\COVID19-API\CityDto.cs" />
+    <Compile Include="DTOs\COVID19-API\RegionDto.cs" />
     <Compile Include="DTOs\COVID19-API\TopTenDto.cs" />
     <Compile Include="Exceptions\BadRequestException.cs" />
     <Compile Include="Exceptions\NotFoundException.cs" />
