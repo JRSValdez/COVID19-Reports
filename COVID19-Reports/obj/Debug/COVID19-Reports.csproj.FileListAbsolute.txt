@@ -56,4 +56,3 @@ C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-Reports\obj\Debug\COVID19-Re
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-Reports\obj\Debug\COVID19-Reports.csproj.CopyComplete
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-Reports\obj\Debug\COVID19-Reports.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-Reports\obj\Debug\COVID19-Reports.pdb
-C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-Reports\obj\Debug\COVID19-Reports.csprojAssemblyReference.cache

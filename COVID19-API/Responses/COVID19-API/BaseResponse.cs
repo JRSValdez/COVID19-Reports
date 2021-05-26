@@ -7,7 +7,7 @@ namespace COVID19_API.Responses.COVID19_API
 {
     public class BaseResponse<T> : BaseResponse
     {
-        public IReadOnlyList<T> Data { get; set; }
+        public List<T> Data { get; set; }
     }
 
     public class BaseResponse

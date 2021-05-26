@@ -1,11 +1,6 @@
-﻿using COVID19_API.DTOs.COVID19_API;
+﻿using COVID19_API.DTOs.COVID19_API.Regions;
 using COVID19_API.Responses.COVID19_API;
 using COVID19_API.Services.COVID19_API;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
