@@ -272,21 +272,6 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.wasm
-*.wat
-*.xhtml
-
 ### VisualStudio ###
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
