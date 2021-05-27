@@ -89,7 +89,6 @@ C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStud
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\obj\Debug\COVID19-API.csprojAssemblyReference.cache
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
