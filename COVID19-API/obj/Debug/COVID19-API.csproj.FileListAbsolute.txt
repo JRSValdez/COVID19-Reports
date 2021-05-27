@@ -1,4 +1,3 @@
-C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\obj\Debug\COVID19-API.csprojAssemblyReference.cache
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\obj\Debug\COVID19-API.csproj.CoreCompileInputs.cache
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\COVID19-API.dll.config
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\COVID19-API.dll
@@ -86,3 +85,12 @@ C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\System.Web.Optimizat
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\WebGrease.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Antlr3.Runtime.pdb
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\System.Web.Optimization.xml
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\obj\Debug\COVID19-API.csprojAssemblyReference.cache
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Microsoft.TestPlatform.AdapterUtilities.dll
