@@ -23,13 +23,16 @@ namespace COVID19_API
                       "~/Scripts/Select2/Select2.min.js",
                       "~/Scripts/DataTables/datatables.min.js"));
 
+            //CSS
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/customCSS").Include(
                       "~/Content/Select2/Select2.min.css",
-                      "~/Content/DataTables/datatables.min.css"));
+                      "~/Content/DataTables/datatables.min.css",
+                      "~/Content/LoadingAnimation.css"));
         }
     }
 }

@@ -185,6 +185,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DataTables\datatables.min.css" />
+    <Content Include="Content\LoadingAnimation.css" />
     <Content Include="Content\Select2\Select2.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -217,6 +218,7 @@
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="DTOs\COVID19-API\Provinces\CityDto.cs" />
     <Compile Include="DTOs\COVID19-API\Provinces\ProvincesDto.cs" />
+    <Compile Include="DTOs\COVID19-API\Provinces\ProvinceName.cs" />
     <Compile Include="DTOs\COVID19-API\Provinces\RegionDto.cs" />
     <Compile Include="DTOs\COVID19-API\Provinces\ProvincesTopTen.cs" />
     <Compile Include="DTOs\COVID19-API\Regions\RegionDto.cs" />
@@ -227,7 +229,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\TopTenModel.cs" />
     <Compile Include="Options\COVID19-API\COVID19-APIOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Responses\COVID19-API\BaseResponse.cs" />

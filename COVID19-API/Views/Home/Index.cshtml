@@ -6,13 +6,19 @@
 {
     <style>
         .regionSelect {
-            min-width:200px;
+            min-width: 200px;
         }
+
     </style>
 }
 
 
 <div>
+    @*Loading animation*@
+    <div class="loading" id="loading" style="display:none">
+        <div class="loader"></div>
+    </div>
+
     <div>
         <h1 class="display-2">Top 10 - Covid19 Cases</h1>
     </div>
@@ -22,18 +28,22 @@
                 <label>
                     Region:
                 </label>
-                <select class="form-control select2 regionSelect">
+                <select class="form-control select2 regionSelect" style="height:50px">
+                    <option></option>
                 </select>
-                <button class="btn btn-default">
+                <button class="btn btn-default btn-lg" id="reportBtn">
                     Report
+                </button>
+                <button class="btn btn-default btn-lg" id="resetBtn">
+                    Reset
                 </button>
             </div>
         </div>
         <div class="col-md-6 col-sm-6 form-inline">
             <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">XML</button>
-                <button type="button" class="btn btn-secondary">JSON</button>
-                <button type="button" class="btn btn-secondary">CSV</button>
+                <button id="xmlExport" type="button" class="btn btn-secondary">XML</button>
+                <button id="jsonExport" type="button" class="btn btn-secondary">JSON</button>
+                <button id="csvExport" type="button" class="btn btn-secondary">CSV</button>
             </div>
         </div>
     </div>
@@ -41,7 +51,7 @@
         <table id="covid19_table" class="table table-hover">
             <thead>
                 <tr>
-                    <th> Region</th>
+                    <th id="regionOrProvince"> Region</th>
                     <th> Cases</th>
                     <th> Deaths</th>
                 </tr>
@@ -54,8 +64,41 @@
 {
     <script>
 
+        $(document).ajaxStop(function () {
+            $("#loading").css('display', 'none');
+        });
+        $(document).ajaxStart(function () {
+            $("#loading").css('display', 'block');
+        });
+
         $(document).ready(function () {
             $('.select2').select2();
+
+            const fillDataTable = (url = '/api/Topten') => {
+                $('#covid19_table').DataTable({
+                    searching: false,
+                    paging: false,
+                    proccessing: true,
+                    serverSide: true,
+                    autoWidth: false,
+                    filter: false,
+                    orderMulti: false,
+                    order: false,
+                    info: false,
+                    bDestroy: true,
+                    ajax: {
+                        url,
+                        type: "GET",
+                        datatype: "json",
+                        dataSrc: 'Data'
+                    },
+                    columns: [
+                        { data: "region.name" },
+                        { data: "confirmed" },
+                        { data: "deaths" }
+                    ],
+                });
+            }
 
             const getRegions = () => {
                 fetch('/api/Regions')
@@ -63,40 +106,71 @@
                     .then(res => {
                         const regions = res.Data;
                         regions.forEach(r => {
-                            const option = `<option val='${r.iso}'>${r.name}</option>`;
+                            const option = `<option value='${r.iso}'>${r.name}</option>`;
                             $('.regionSelect').append(option)
                         });
                     })
             }
 
+            $('#reportBtn').on('click', (e) => {
+                filterByRegion();
+            });
+
+            $('#resetBtn').on('click', (e) => {
+                $('#regionOrProvince').text('Region');
+                fillDataTable();
+            });
+
+            $('#csvExport').on('click', (e) => {
+                const regionISO = $('.regionSelect').val();
+                if (regionISO!='') {
+                    window.open(`/api/Provinces/CsvReport?regionISO=${regionISO}`, '_blank');
+                } else {
+                    window.open(`/api/TopTen/CsvReport`, '_blank');
+
+                }
+            });
+
+            $('#xmlExport').on('click', (e) => {
+                const regionISO = $('.regionSelect').val();
+                if (regionISO != '') {
+                    window.open(`/api/Provinces/XmlReport?regionISO=${regionISO}`, '_blank');
+                } else {
+                    window.open(`/api/TopTen/XmlReport`, '_blank');
+
+                }
+            });
+
+            $('#jsonExport').on('click', (e) => {
+                const regionISO = $('.regionSelect').val();
+                if (regionISO != '') {
+                    window.open(`/api/Provinces/JsonReport?regionISO=${regionISO}`, '_blank');
+                } else {
+                    window.open(`/api/TopTen/JsonReport`, '_blank');
+
+                }
+            });
+
+            const filterByRegion = () => {
+                const regionISO = $('.regionSelect').val();
+
+                if (regionISO != '') {
+                    $('#regionOrProvince').text('Province');
+                    fillDataTable(`/api/Provinces?RegionISO=${regionISO}`);
+                } else {
+                    $('#regionOrProvince').text('Region');
+                    fillDataTable();
+                }
+            }
+
             const init = () => {
                 getRegions();
+                fillDataTable();
             }
 
             init();
 
-            $('#covid19_table').DataTable({
-                searching: false,
-                paging: false,
-                proccessing: true,
-                serverSide: true,
-                autoWidth: false,
-                filter: true,
-                orderMulti: false,
-                info: false,
-                ajax: {
-                    url: "/api/Topten",
-                    type: "GET",
-                    datatype: "json",
-                    dataSrc: 'Data'
-                },
-                columns: [
-                    { data: "region.name" },
-                    { data: "confirmed" },
-                    { data: "deaths" }
-                ],
-            });
         });
-        
+
     </script>
 }
