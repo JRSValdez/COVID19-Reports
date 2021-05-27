@@ -76,11 +76,13 @@ C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\roslyn\System.Buffer
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\roslyn\System.Memory.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\COVID19-Reports.dll
-C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\COVID19-Reports.pdb
-C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\COVID19-Reports.dll.config
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Ninject.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Ninject.Extensions.ChildKernel.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\WebApiContrib.IoC.Ninject.dll
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Ninject.xml
 C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Ninject.Extensions.ChildKernel.xml
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Antlr3.Runtime.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\System.Web.Optimization.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\WebGrease.dll
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\Antlr3.Runtime.pdb
+C:\Users\rsifontes\Projects\COVID19-Reports\COVID19-API\bin\System.Web.Optimization.xml

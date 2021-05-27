@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    <style>
+        .regionSelect {
+            min-width:200px;
+        }
+    </style>
+}
+
+
+<div>
+    <div>
+        <h1 class="display-2">Top 10 - Covid19 Cases</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 form-inline">
+            <div class="form-group">
+                <label>
+                    Region:
+                </label>
+                <select class="form-control select2 regionSelect">
+                </select>
+                <button class="btn btn-default">
+                    Report
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 form-inline">
+            <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">XML</button>
+                <button type="button" class="btn btn-secondary">JSON</button>
+                <button type="button" class="btn btn-secondary">CSV</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="covid19_table" class="table table-hover">
+            <thead>
+                <tr>
+                    <th> Region</th>
+                    <th> Cases</th>
+                    <th> Deaths</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+
+        $(document).ready(function () {
+            $('.select2').select2();
+
+            const getRegions = () => {
+                fetch('/api/Regions')
+                    .then(data => data.json())
+                    .then(res => {
+                        const regions = res.Data;
+                        regions.forEach(r => {
+                            const option = `<option val='${r.iso}'>${r.name}</option>`;
+                            $('.regionSelect').append(option)
+                        });
+                    })
+            }
+
+            const init = () => {
+                getRegions();
+            }
+
+            init();
+
+            $('#covid19_table').DataTable({
+                searching: false,
+                paging: false,
+                proccessing: true,
+                serverSide: true,
+                autoWidth: false,
+                filter: true,
+                orderMulti: false,
+                info: false,
+                ajax: {
+                    url: "/api/Topten",
+                    type: "GET",
+                    datatype: "json",
+                    dataSrc: 'Data'
+                },
+                columns: [
+                    { data: "region.name" },
+                    { data: "confirmed" },
+                    { data: "deaths" }
+                ],
+            });
+        });
+        
+    </script>
+}
